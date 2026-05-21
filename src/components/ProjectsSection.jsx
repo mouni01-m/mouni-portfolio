@@ -9,7 +9,7 @@ export function ProjectsSection() {
       <SectionHeading
         eyebrow="Projects"
         title="Selected work across software, intelligence, and embedded systems."
-        description="Each project reflects a different side of my technical range, from frontend polish to communication systems and AI experimentation."
+        description="Each project reflects a different side of my technical range, from web polish to communication systems and AI experimentation."
       />
       <div className="grid gap-8 lg:grid-cols-2">
         {projects.map((project, index) => (

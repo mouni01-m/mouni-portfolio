@@ -96,7 +96,7 @@ export function HeroSection() {
                 <div className="rounded-[24px] border border-white/10 bg-gradient-to-r from-cyan-400/10 via-slate-900 to-emerald-400/10 p-6">
                   <p className="text-sm leading-7 text-slate-300">
                     Open to internships, recruiter conversations, and freelance
-                    opportunities across frontend development, IoT prototyping, and
+                    opportunities across web development, IoT prototyping, and
                     technical product building.
                   </p>
                 </div>

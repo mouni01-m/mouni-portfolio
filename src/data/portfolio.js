@@ -33,7 +33,7 @@ export const stats = [
 
 export const skills = [
   {
-    title: "Frontend",
+    title: "Web Development",
     icon: FiLayers,
     items: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
   },
@@ -92,13 +92,22 @@ export const projects = [
     accent: "from-amber-400/30 via-orange-400/10 to-rose-500/20",
   },
   {
-    title: "Personal Portfolio Website",
+    title: "DCDC SRMIST Website",
     description:
-      "A premium personal brand experience crafted to present projects, achievements, technical skills, and contact pathways in a polished modern interface.",
-    stack: ["React", "Tailwind CSS", "Framer Motion"],
+      "A public-facing site for the DCDC student developer community, highlighting events, resources, and member engagement.",
+    stack: ["Responsive Web", "Community Platform", "UI/UX"],
     github: "https://github.com/",
-    demo: "https://example.com/",
+    demo: "https://www.dcdcsrmist.in",
     accent: "from-violet-500/30 via-indigo-400/10 to-cyan-400/20",
+  },
+  {
+    title: "SWE Ayush Website",
+    description:
+      "A professional website for SWE Ayush featuring portfolio details, service highlights, and seamless navigation.",
+    stack: ["Responsive Web", "UI/UX", "Content Design"],
+    github: "https://github.com/",
+    demo: "https://www.sweayush.com",
+    accent: "from-fuchsia-500/30 via-violet-400/10 to-sky-500/20",
   },
 ];
 
@@ -107,7 +116,7 @@ export const achievements = [
     title: "Certifications",
     icon: FiAward,
     points: [
-      "Web development and frontend specialization certificates",
+      "Web development and web developer specialization certificates",
       "Programming and problem-solving coursework recognitions",
       "IoT and embedded systems workshop participation",
     ],

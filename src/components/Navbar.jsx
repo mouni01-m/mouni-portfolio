@@ -22,7 +22,7 @@ export function Navbar() {
             className="font-display text-lg font-semibold tracking-[0.2em] text-white"
             onClick={closeMenu}
           >
-            MOUNI<span className="text-cyan-300">.</span>
+            MOUNISHAN<span className="text-cyan-300">.</span>
           </a>
           <div className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
