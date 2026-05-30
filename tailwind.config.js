@@ -4,23 +4,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: "#060816",
-        surface: "#0d1226",
-        neon: "#7dd3fc",
-        accent: "#34d399",
-        violet: "#8b5cf6",
+        canvas: "#0F172A",
+        surface: "#111C2F",
+        primary: "#3B82F6",
+        accent: "#22D3EE",
+        text: "#F8FAFC",
+        muted: "#E2E8F0",
       },
       fontFamily: {
         display: ["Sora", "sans-serif"],
         body: ["Manrope", "sans-serif"],
       },
       boxShadow: {
-        glow: "0 0 40px rgba(125, 211, 252, 0.18)",
-        card: "0 22px 60px rgba(6, 8, 22, 0.45)",
+        glow: "0 0 40px rgba(34, 211, 238, 0.2)",
+        card: "0 22px 60px rgba(15, 23, 42, 0.5)",
       },
       backgroundImage: {
         grid:
-          "linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px)",
+          "linear-gradient(rgba(148, 163, 184, 0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.09) 1px, transparent 1px)",
       },
       animation: {
         float: "float 6s ease-in-out infinite",
@@ -46,4 +47,3 @@ export default {
   },
   plugins: [],
 };
-

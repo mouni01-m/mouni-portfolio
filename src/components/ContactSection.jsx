@@ -1,32 +1,27 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { FiGithub, FiLinkedin, FiMail, FiSend } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiPhone, FiSend } from "react-icons/fi";
 import { socialLinks } from "../data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 
 const iconMap = {
   Email: FiMail,
+  Phone: FiPhone,
   LinkedIn: FiLinkedin,
   GitHub: FiGithub,
 };
 
-const initialForm = {
-  name: "",
-  email: "",
-  message: "",
-};
-
 export function ContactSection() {
-  const [form, setForm] = useState(initialForm);
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    const subject = encodeURIComponent(`Portfolio enquiry from ${form.name || "a visitor"}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`,
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+    const whatsappMessage = encodeURIComponent(
+      `New portfolio enquiry\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
     );
 
-    window.location.href = `mailto:mounishan@example.com?subject=${subject}&body=${body}`;
+    window.open(`https://wa.me/919655082924?text=${whatsappMessage}`, "_blank", "noreferrer");
   };
 
   return (
@@ -42,11 +37,12 @@ export function ContactSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
-          className="rounded-[30px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl"
+          className="tech-card p-7"
         >
-          <h3 className="font-display text-2xl font-bold text-white">Contact Channels</h3>
-          <p className="mt-4 text-slate-300">
-            Replace the placeholder links below with your real contact details.
+          <h3 className="font-display text-2xl font-bold text-[#F8FAFC]">Contact Channels</h3>
+          <p className="mt-4 text-[#E2E8F0]">
+            Connect through email, phone, LinkedIn, or GitHub for internships,
+            collaborations, and project discussions.
           </p>
           <div className="mt-8 space-y-4">
             {socialLinks.map((link) => {
@@ -57,9 +53,9 @@ export function ContactSection() {
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                  className="flex items-center gap-4 rounded-2xl border border-white/10 bg-slate-950/40 px-5 py-4 text-slate-300 transition hover:border-cyan-300/30 hover:text-white"
+                  className="flex items-center gap-4 rounded-lg border border-[#3B82F6]/25 bg-[#0F172A]/80 px-5 py-4 text-[#E2E8F0] transition hover:border-[#22D3EE]/50 hover:text-[#F8FAFC]"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-300/10 text-cyan-200">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#3B82F6]/20 text-[#22D3EE]">
                     <Icon />
                   </span>
                   <span>{link.label}</span>
@@ -75,48 +71,46 @@ export function ContactSection() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6 }}
           onSubmit={handleSubmit}
-          className="rounded-[30px] border border-white/10 bg-white/5 p-7 backdrop-blur-xl"
+          className="tech-card p-7"
         >
           <div className="grid gap-5">
             <div>
-              <label htmlFor="name" className="mb-2 block text-sm font-medium text-slate-300">
+              <label htmlFor="name" className="mb-2 block text-sm font-medium text-[#F8FAFC]">
                 Name
               </label>
               <input
                 id="name"
+                name="name"
                 type="text"
-                value={form.name}
-                onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
                 className="input-field"
                 placeholder="Your name"
+                required
               />
             </div>
             <div>
-              <label htmlFor="email" className="mb-2 block text-sm font-medium text-slate-300">
+              <label htmlFor="email" className="mb-2 block text-sm font-medium text-[#F8FAFC]">
                 Email
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
-                value={form.email}
-                onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
                 className="input-field"
                 placeholder="your@email.com"
+                required
               />
             </div>
             <div>
-              <label htmlFor="message" className="mb-2 block text-sm font-medium text-slate-300">
+              <label htmlFor="message" className="mb-2 block text-sm font-medium text-[#F8FAFC]">
                 Message
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows="6"
-                value={form.message}
-                onChange={(event) =>
-                  setForm((prev) => ({ ...prev, message: event.target.value }))
-                }
                 className="input-field resize-none"
                 placeholder="Tell me about the opportunity or project..."
+                required
               />
             </div>
             <button type="submit" className="primary-button justify-center">
@@ -129,4 +123,3 @@ export function ContactSection() {
     </section>
   );
 }
-

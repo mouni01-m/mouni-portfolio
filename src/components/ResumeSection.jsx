@@ -9,17 +9,17 @@ export function ResumeSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.65 }}
-        className="overflow-hidden rounded-[34px] border border-white/10 bg-white/5 p-8 shadow-card backdrop-blur-xl sm:p-10"
+        className="tech-card overflow-hidden p-8 sm:p-10"
       >
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <span className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100">
+            <span className="inline-flex rounded-lg border border-[#3B82F6]/35 bg-[#0F172A] px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#22D3EE]">
               Resume
             </span>
-            <h2 className="mt-6 font-display text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mt-6 font-display text-3xl font-bold text-[#F8FAFC] sm:text-4xl">
               Looking for a polished candidate profile?
             </h2>
-            <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+            <p className="mt-4 max-w-3xl text-lg leading-8 text-[#E2E8F0]">
               Download my resume to explore my academic background, project work,
               technical strengths, and readiness for internships, recruiter
               discussions, and freelance opportunities.
@@ -34,4 +34,3 @@ export function ResumeSection() {
     </section>
   );
 }
-

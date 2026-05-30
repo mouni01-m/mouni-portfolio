@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-base text-white">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#0F172A] text-[#F8FAFC]">
       <ScrollProgress />
       <LoadingScreen isLoading={isLoading} />
       <ParticleBackground />
@@ -52,4 +52,3 @@ function App() {
 }
 
 export default App;
-

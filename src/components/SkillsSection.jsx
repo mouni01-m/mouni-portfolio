@@ -21,19 +21,19 @@ export function SkillsSection() {
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.55, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition"
+              className="tech-card group p-6 transition"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-300/10 text-2xl text-cyan-200 shadow-glow">
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-[#3B82F6]/20 text-2xl text-[#22D3EE] shadow-glow">
                 <Icon />
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold text-white">
+              <h3 className="mt-6 font-display text-2xl font-bold text-[#F8FAFC]">
                 {skill.title}
               </h3>
               <div className="mt-6 flex flex-wrap gap-3">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-slate-950/60 px-4 py-2 text-sm text-slate-300 transition group-hover:border-cyan-300/30 group-hover:text-white"
+                    className="tech-chip transition group-hover:border-[#22D3EE]/50 group-hover:text-[#F8FAFC]"
                   >
                     {item}
                   </span>
@@ -46,4 +46,3 @@ export function SkillsSection() {
     </section>
   );
 }
-

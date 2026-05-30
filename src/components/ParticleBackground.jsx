@@ -10,12 +10,12 @@ const particles = Array.from({ length: 18 }, (_, index) => ({
 export function ParticleBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.12),transparent_35%),radial-gradient(circle_at_80%_30%,rgba(52,211,153,0.08),transparent_30%),radial-gradient(circle_at_bottom,rgba(139,92,246,0.14),transparent_40%)]" />
-      <div className="absolute inset-0 bg-grid bg-[size:52px_52px] opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_8%,rgba(59,130,246,0.24),transparent_30%),radial-gradient(circle_at_82%_22%,rgba(37,99,235,0.16),transparent_32%),linear-gradient(180deg,rgba(15,23,42,0.08),rgba(15,23,42,0.96))]" />
+      <div className="absolute inset-0 bg-grid bg-[size:64px_64px] opacity-25" />
       {particles.map((particle) => (
         <span
           key={particle.id}
-          className="absolute rounded-full bg-white/10 blur-[2px] animate-float"
+          className="absolute rounded-full bg-[#94A3B8]/20 blur-[2px] animate-float"
           style={{
             width: `${particle.size}px`,
             height: `${particle.size}px`,
@@ -27,8 +27,7 @@ export function ParticleBackground() {
         />
       ))}
       <span className="absolute left-[-10%] top-[12%] h-px w-56 animate-meteor bg-gradient-to-r from-transparent via-cyan-300 to-transparent opacity-80" />
-      <span className="absolute left-[-20%] top-[30%] h-px w-72 animate-meteor bg-gradient-to-r from-transparent via-violet-300 to-transparent opacity-60 [animation-delay:3s]" />
+      <span className="absolute left-[-20%] top-[30%] h-px w-72 animate-meteor bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-60 [animation-delay:3s]" />
     </div>
   );
 }
-

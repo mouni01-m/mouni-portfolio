@@ -18,7 +18,7 @@ export function BackToTop() {
         <motion.button
           type="button"
           aria-label="Back to top"
-          className="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-slate-950/80 text-white shadow-glow backdrop-blur-xl"
+          className="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-lg border border-[#22D3EE]/40 bg-[#111C2F] text-[#F8FAFC] shadow-glow"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
@@ -30,4 +30,3 @@ export function BackToTop() {
     </AnimatePresence>
   );
 }
-
